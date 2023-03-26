@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Classes in JavaScript | COMP1073 Client-Side JavaScript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<script src="js/smoothie.js" defer></script>
+</head>
+<body>
+<main class="container">
+	<h1>Smoothie Order Form</h1>
+	<form id="smoothie-form">
+		<fieldset>
+			<legend>Select a flavor:</legend>
+			<img class="icon" src="images/red.png" alt="strawberry">
+			<input type="radio" id="strawberry" name="flavor" value="strawberry">
+			<label for="strawberry">Strawberry - $2.50</label>
+			<br>
+			<img class="icon" src="images/yellow.png" alt="banana">
+			<input type="radio" id="banana" name="flavor" value="banana" checked>
+			<label for="banana">Banana - $2.75</label>
+			<br>
+			<img class="icon" src="images/green.png" alt="pineapple">
+			<input type="radio" id="pineapple" name="flavor" value="pineapple">
+			<label for="pineapple">Pineapple - $3.25</label>
+		</fieldset>
+
+		<fieldset>
+			<legend>Select a size:</legend>
+			<input type="radio" id="small" name="size" value="small">
+			<label for="small">Small - $3.00</label>
+			<br>
+			<input type="radio" id="medium" name="size" value="medium" checked>
+			<label for="medium">Medium - $4.00</label>
+			<br>
+			<input type="radio" id="large" name="size" value="large">
+			<label for="large">Large - $5.00</label>
+		</fieldset>
+		<fieldset>
+			<legend>Select toppings:</legend>
+			<input type="checkbox" id="cream" name="toppings" value="cream">
+			<label for="cream">Cream - $0.50</label>
+			<br>
+			<input type="checkbox" id="chips" name="toppings" value="chips">
+			<label for="chips">Chips - $0.50</label>
+		</fieldset>
+		<button type="submit" id="order-button">Order</button>
+	</form>
+
+	<div id="smoothie-output">
+		<h2>Smoothie Order Summary</h2>
+		<table>
+			<thead>
+			<tr>
+				<th>Item</th>
+				<th>Price</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr id="flavor-row">
+				<td>Flavor:</td>
+				<td></td>
+			</tr>
+			<tr id="size-row">
+				<td>Size:</td>
+				<td></td>
+			</tr>
+			<tr id="toppings-row">
+				<td>Toppings:</td>
+				<td></td>
+			</tr>
+			<tr id="total-row">
+				<td>Total:</td>
+				<td></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</main>
+</body>
+</html>
